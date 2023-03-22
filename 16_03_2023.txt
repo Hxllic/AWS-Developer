@@ -1,0 +1,47 @@
+Serverless: No se administra de manera propia el servidor, pero sí que hay servidor. "No hay que provisionar un servidor y tampoco hay que arrancarlo".
+Operational overhead: Es la sobrecarga de curro del administrador humano.
+Tarjeta de red provisionada por software: Es una tarjeta de red que no puedes romper por la mitad. Es virtual.
+
+Particionamiento lógico de datos: Consiste en coger los datos que antes teníamos en una base de datos relacional, y se reparten en shards o pedacitos.
+Lectura sucia o dirty read: Es cuando lees un dato en una replica de una partición o shard que ha sido modificado en su maestro pero probablemente no te importa por las características del negocio.
+Ejemplo: Busqueda de Sushi  Ejemplo que no debería tener Lectura Sucia: Transferir dinero de una cuenta y no llegue a la otra cuenta.
+
+Teorema Cap: Equilibrio entre Consistencia, Disponibilidad y la tolerancia al Particionamiento.
+
+Modelo relacional vs Modelo de particionamiento:
+    Modelo relacional premia la consistencia de datos, como mucho permitiendo un nodo "pasivo"(slave) o nodos "read-replica".
+    El modelo de particionamiento permite adaptar el teorema CAP a nuestras necesidades, jugando sobre todo con la availability y la partition tolerance.
+    Cuantas más réplicas, más disponibilidad.
+    Cuantas más particiones, más tolerancia al particionamiento.
+
+Amazon RDS -> Base de datos relacional
+DynamoDB -> Base de datos distribuida
+
+CDN -> Content delivery network -> web de ordenadores dedicada a propagat contenidos por todo el planeta (Dazn, Netflix)
+
+Los servidores tienen todos o casi todos los servicios de AWS, mientras que las edge location tienen las cdn.
+
+Programación por snippets-> Ejemplo: programa en Scratch. Programación con trocitos de código.
+Vaporware: Software Vende humos. 
+
+Convencional commits: Para dar formato a los commits.
+Compliance: temas de papeleo legal que tienes que hacer por dedicarte a lo que te dedicas.
+Prompt: La consola que usas para interactuar con el SSOO
+    Bash: El tipo de shell linux quizás más popular
+    Sh: Es como bash pero más ligero
+    CMD: El de windows
+    Powershell: Como CMD pero más servicios
+    AWS Cli : Es un ejecutable del SSOO que te abre un shell específico de AWS
+
+Api: 
+    Tradicionalmente una librería de código compilada.
+    Un endpoint http al que llamas para conseguir "algo" y suele devolverte un json.
+
+Permisos de grano grueso(coarse): Quiere decir que das permisos para poder acceder a todo el sistema.
+Permisos de grano fino(fine): Controlas a muy bajo nivel que permisos tienes.
+
+Identity Federation: Cuando te logeas con google un facebook en una página que no tiene nada que ver, es porque genera un token específico para identificar una persona.
+    Usando un pipeline de autenticación para autenticar un usuario en varios sistemas.
+
+
+
